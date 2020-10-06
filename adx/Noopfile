@@ -38,7 +38,7 @@ RUN chmod a+x ./bin/*
 # command to run on container start
 CMD [ "/bin/bash", "./bin/run-script.sh" ]
 
-TIMEOUT 600
+# TIMEOUT 600
 CRON 0 0 * * *
 
 # Specifies when this task component will run. BeforeTraffic means this task will run immediately after all other components have been deployed.

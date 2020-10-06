@@ -70,19 +70,12 @@ python src/create_dataset_revision.py \
 echo "check dataset revision status"
 DATASET_REVISION_STATUS=$(aws dataexchange list-data-set-revisions --data-set-id "$DATASET_ID" --region "$REGION" --query "sort_by(Revisions, &CreatedAt)[-1].Finalized"$PROFILE)
 
-echo "DATASET_OUTPUT: $DATASET_OUTPUT"
-echo "DATASET_ARN: $DATASET_ARN"
-echo "DATASET_ID: $DATASET_ID"
-echo "aws dataexchange list-data-set-revisions --data-set-id \"$DATASET_ID\" --region \"$REGION\" --query \"sort_by(Revisions, &CreatedAt)[-1].Finalized\"$PROFILE"
-
 if [[ $DATASET_REVISION_STATUS == "true" ]]
 then
-  echo "Dataset revision completed successfully"
-  echo ""
-
-  echo "Manually create the ADX product."
-  echo "In Noop console, copy the PRODUCT_ID, DATASET_ID, and DATASET_ARN \
-       from AWS ADX console and add to Variables & Secrets section of your Environment."
+  echo "Dataset revision completed successfully\n"
+  echo "Manually create the ADX product from Amazon Data Exchange Console.\n"
+  echo "In Noop console, copy the PRODUCT_ID, DATASET_ID, and DATASET_ARN from
+        ADX console and add them to Variables & Secrets section of your app Environment."
 
 else
   echo "Dataset revision failed"

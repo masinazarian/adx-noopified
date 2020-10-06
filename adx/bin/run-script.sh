@@ -20,6 +20,9 @@ export PRODUCT_NAME='BEA - Personal Consumption Expenditures (PCE) by State'
 export PRODUCT_ID='BLANK'
 export REGION='us-east-1'
 
+export AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID_APP"
+export AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY_APP"
+
 while [[ ${#DATASET_NAME} -gt 53 ]]; do
     echo "dataset-name must be under 53 characters in length, use a shorter name!"
     exit 1

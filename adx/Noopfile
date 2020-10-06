@@ -18,15 +18,15 @@ RUN wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -O /
     chmod +x /usr/local/bin/jq
 RUN pip install -r requirements.txt
 
-# Sets an environment variable available at build's runtime.
-ENV SOURCE_DATA_URL 'https://apps.bea.gov/regional/zip/SAEXP.zip'
-ENV S3_BUCKET 'rearc-data-provider'
-ENV DATASET_NAME 'bea-personal-consumption-expenditures-by-state'
-ENV DATASET_ARN ''
-ENV DATASET_ID ''
-ENV PRODUCT_NAME 'BEA - Personal Consumption Expenditures (PCE) by State'
-ENV PRODUCT_ID 'BLANK'
-ENV REGION 'us-east-1'
+# # Sets an environment variable available at build's runtime.
+# ENV SOURCE_DATA_URL 'https://apps.bea.gov/regional/zip/SAEXP.zip'
+# ENV S3_BUCKET 'rearc-data-provider'
+# ENV DATASET_NAME 'bea-personal-consumption-expenditures-by-state'
+# ENV DATASET_ARN ''
+# ENV DATASET_ID ''
+# ENV PRODUCT_NAME 'BEA - Personal Consumption Expenditures (PCE) by State'
+# ENV PRODUCT_ID 'BLANK'
+# ENV REGION 'us-east-1'
 
 # Sets environment variables for runtime. The variables available from a defined resource vary depending on the type of the resource.
 # ENV DYNAMO_TABLE $.resources.mobilityDB.tableName

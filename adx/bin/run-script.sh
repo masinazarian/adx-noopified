@@ -41,7 +41,7 @@ echo "PROFILE: $PROFILE"
 
 # create dataset on ADX
 echo "creating dataset on ADX"
-DATASET_COMMAND="aws dataexchange create-data-set --asset-type "S3_SNAPSHOT" --description file://dataset-description.md --name \"${PRODUCT_NAME}\" --region $REGION --output json$PROFILE"
+DATASET_COMMAND="aws dataexchange create-data-set --asset-type "S3_SNAPSHOT" --description file://../dataset-description.md --name \"${PRODUCT_NAME}\" --region $REGION --output json$PROFILE"
 DATASET_OUTPUT=$(eval $DATASET_COMMAND)
 DATASET_ARN=$(echo $DATASET_OUTPUT | tr '\r\n' ' ' | jq -r '.Arn')
 DATASET_ID=$(echo $DATASET_OUTPUT | tr '\r\n' ' ' | jq -r '.Id')

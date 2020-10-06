@@ -75,7 +75,9 @@ then
   echo "Dataset revision completed successfully"
   echo ""
 
-#   echo "Manually create the ADX product and paste the PRODUCT_ID below:"
+  echo "Manually create the ADX product."
+  echo "In Noop console, add the PRODUCT_ID, DATASET_ID, and DATASET_ARN \
+       to Variables & Secrets section of your Environment."
 #   export PRODUCT_ID='prod-????'  # <<< paste the product id from AWS ADX console here
 
 #   echo ""

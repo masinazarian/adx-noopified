@@ -1,4 +1,4 @@
-COMPONENT create_dataset task
+COMPONENT createDataset task
 
 # Describes a database resource used by the component defined within this file.
 # RESOURCE metadataDB dynamodb -s hashKeyName=name -s hashKeyType=S -s rangeKeyName=type -s rangeKeyType=S
@@ -6,7 +6,7 @@ COMPONENT create_dataset task
 # Runtime stage installs dependencies, and organize files to assist in execution of the component.
 # FROM amazon/aws-cli:latest    
 FROM python:3.8
-WORKDIR create_dataset
+WORKDIR createDataset
 
 # copy the content of the local directory to the working directory
 COPY ./ .

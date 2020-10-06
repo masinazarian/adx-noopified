@@ -1,0 +1,34 @@
+### Personal Consumption Expenditures (PCE) by State (Table SAEXP) | The U.S. Bureau of Economic Analysis (BEA)
+
+The source code outlining how this product gathers, transforms, revises and publishes its datasets is available at [https://github.com/rearc-data/bea-personal-consumption-expenditures-by-state](https://github.com/rearc-data/bea-personal-consumption-expenditures-by-state).
+
+## Main Overview
+
+The U.S. Bureau of Economic Analysis (BEA) produces data about the nation's economy, including U.S. gross domestic product, better known as GDP, as well as state and local numbers, foreign trade and investment stats and industry data.
+
+#### Data Source
+
+The dataset files included with this product are provided in CSV format. README files are also included to offer context on data fields used throughout the dataset files. The specific files included with each revisions may vary.
+
+Consumer spending is a key component of quarterly gross domestic product. This dataset offers consumer spending statistics published by BEA and can serve as one of early gauges of the economy's strength. It includes data on the goods and services purchased by, or on behalf of, people living in each state and the District of Columbia. Officially known as personal consumption expenditures, these statistics provide insight into the strength of a state economy and consumers' buying trends.
+
+This product uses the Bureau of Economic Analysis (BEA) Data but is not endorsed or certified by BEA. Please refer to the [BEA Terms Of Service](https://apps.bea.gov/API/_pdf/bea_api_tos.pdf) for more information.
+
+## More Information
+
+- Source: [The U.S. Bureau of Economic Analysis](https://www.bea.gov/)
+- [BEA - Personal Consumption Expenditures (PCE) by State](https://www.bea.gov/data/consumer-spending/state)
+- [BEA Terms Of Service](https://apps.bea.gov/API/_pdf/bea_api_tos.pdf)
+- Frequency: Annual (in October)
+- Format: CSV
+
+## Contact Details
+
+- If you find any issues with or have enhancement ideas for this product, open up a GitHub [issue](https://github.com/rearc-data/bea-regional-employment-by-county-metro/issues) and we will gladly take a look at it. Better yet, submit a pull request. Any contributions you make are greatly appreciated :heart:.
+- If you are looking for specific open datasets currently not available on ADX, please submit a request on our project board [here](https://github.com/orgs/rearc-data/projects/1).
+- If you have questions about the source data, please contact [The U.S. Bureau of Economic Analysis](https://www.bea.gov/help/contact-us).
+- If you have any other questions or feedback, send us an email at data@rearc.io.
+
+## About Rearc
+
+Rearc is a cloud, software and services company. We believe that empowering engineers drives innovation. Cloud-native architectures, modern software and data practices, and the ability to safely experiment can enable engineers to realize their full potential. We have partnered with several enterprises and startups to help them achieve agility. Our approach is simple — empower engineers with the best tools possible to make an impact within their industry.

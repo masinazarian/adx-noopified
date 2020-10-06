@@ -8,8 +8,6 @@ from datetime import date
 from multiprocessing.dummy import Pool
 from argparse import ArgumentParser
 
-
-
 def start_change_set(describe_entity_response, revision_arn):
     """Call AWSMarketplace Catalog API to add revisions to the Product"""
     change_details = {

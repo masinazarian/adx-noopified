@@ -22,10 +22,11 @@ RUN pip install -r requirements.txt
 # ENV DYNAMO_TABLE $.resources.mobilityDB.tableName
 # ENV DYNAMO_ENDPOINT $.resources.mobilityDB.endpoint
 
-# command to run on container start
 RUN chmod a+x ./bin/*
-RUN ./bin/run-script.sh
-# CMD [ "/bin/bash", "./bin/run-script.sh" ]
+# RUN ./bin/run-script.sh
+
+# command to run on container start
+CMD [ "/bin/bash", "./bin/run-script.sh" ]
 
 CRON 0 0 * * *
 

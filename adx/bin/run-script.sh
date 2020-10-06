@@ -41,8 +41,10 @@ if [[ ${#PRODUCT_NAME} -gt 72 ]]; then
     exit 1
 fi
 
-echo "creating dataset on ADX if DATASET_ARN is not set"
+
 if [[ -z "${DATASET_ARN}" ]]; then
+  echo "create a dataset on ADX if DATASET_ARN is not set"
+
   DATASET_COMMAND="aws dataexchange create-data-set --asset-type "S3_SNAPSHOT" --description file://dataset-description.md --name \"${PRODUCT_NAME}\" --region $REGION --output json"
   DATASET_OUTPUT=$(eval $DATASET_COMMAND)
   DATASET_ARN=$(echo $DATASET_OUTPUT | tr '\r\n' ' ' | jq -r '.Arn')
@@ -54,7 +56,7 @@ fi
 echo "DATASET_ARN: $DATASET_ARN"
 echo "DATASET_ID: $DATASET_ID"
 
-echo "creating a dataset revision"
+echo "create a dataset revision if there is an update to the source data"
 python src/create_dataset_revision.py \
     --source_data_url "$SOURCE_DATA_URL" \
     --region "$REGION" \

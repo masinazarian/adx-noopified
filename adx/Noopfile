@@ -48,5 +48,4 @@ RUN pip install -r requirements.txt
 RUN chmod a+x ./bin/*
 CMD [ "/bin/bash", "./bin/run-script.sh" ]
 
-LIFECYCLE beforeTraffic
 CRON 0 * * * *
